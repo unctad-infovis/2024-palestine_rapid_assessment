@@ -84,7 +84,7 @@ function App() {
           dataAll && dataAll.map((el) => <div className="square" title={el['28dec']} style={{ backgroundColor: f_3_all(el['28dec']) }} key={uuidv4()} />)
         }
       </div> */}
-      <h3>Gaza NTL</h3>
+      <h3 className="text_center">Gaza NTL</h3>
       <div className="ntl_map">
         {
           dataGaza && dataGaza.map((el) => <div className="square" title={el['6oct']} style={{ backgroundColor: f_0_gaza(el['6oct']) }} key={uuidv4()} />)

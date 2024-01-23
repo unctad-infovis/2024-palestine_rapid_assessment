@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="app">
-      <h3>Gaza Damage</h3>
+      <h3 className="text_center">Gaza Damage</h3>
       <div className="damage_map">
         {
           dataGaza && dataGaza.map((el) => <div className="square" title={el['23nov']} style={{ backgroundColor: f_0_gaza(el['23nov']) }} key={uuidv4()} />)
