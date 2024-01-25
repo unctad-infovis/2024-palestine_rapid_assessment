@@ -10,7 +10,7 @@ import 'intersection-observer';
 import { useIsVisible } from 'react-is-visible';
 
 function App({
-  captions, image, images, note, source, title
+  captions, image, images, note, source, subtitle, title
 }) {
   const appRef = useRef();
   const mapRef = useRef();
@@ -87,6 +87,7 @@ function App({
           <div className="background_map" ref={mapRef} style={(mapOffset !== false) ? { top: mapOffset } : { bottom: '0' }}>
             <div className="content_container">
               <h4>{title}</h4>
+              <h5>{subtitle}</h5>
               <img src={`./assets/img/${images[0]}.png`} alt="" />
               {
                 source && (
@@ -110,15 +111,17 @@ function App({
           </div>
           {
             captions && captions.map(caption => (
-              <div className="date_container" key={caption}>
-                <div className="date">{caption}</div>
+              <div className="meta_container" key={caption.text}>
+                <div className="caption">
+                  <div className="text">{caption.text}</div>
+                  <div className="date_title">{caption.date_title}</div>
+                  <div className="date">{caption.date}</div>
+                </div>
               </div>
             ))
           }
-
         </div>
       </div>
-
       <noscript>Your browser does not support JavaScript!</noscript>
     </div>
   );
@@ -130,12 +133,14 @@ App.propTypes = {
   images: PropTypes.instanceOf(Array).isRequired,
   note: PropTypes.string,
   source: PropTypes.string,
+  subtitle: PropTypes.string,
   title: PropTypes.string
 };
 
 App.defaultProps = {
   source: false,
   note: false,
+  subtitle: '',
   title: ''
 };
 

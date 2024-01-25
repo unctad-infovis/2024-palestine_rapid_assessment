@@ -30,10 +30,10 @@ function App() {
   // const f_2_gaza = chroma.scale(['rgba(0, 0, 0, 0.8)', '#f8e66b']).domain([25, 80, 446]);
   // const f_3_gaza = chroma.scale(['rgba(0, 0, 0, 0.8)', '#f8e66b']).domain([53, 80, 345]);
 
-  const f_0_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([81, 103.5041667, 114, 135.4541667, 439]); // oct
+  const f_0_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 103.5041667, 114, 135.4541667, 439]); // oct
   const f_1_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 15, 17, 19.75, 439]); // nov 23
-  const f_2_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([25, 37, 41.5, 48.66666667, 439]); // nov 30
-  const f_3_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([53, 69, 73.36111111, 80, 439]); // dec29
+  const f_2_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 37, 41.5, 48.66666667, 439]); // nov 30
+  const f_3_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 69, 73.36111111, 80, 439]); // dec29
 
   // const [dataAll, setDataAll] = useState(false);
   const [dataGaza, setDataGaza] = useState(false);
