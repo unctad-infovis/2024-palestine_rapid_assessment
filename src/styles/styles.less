@@ -431,10 +431,38 @@
           @media all and (max-width: 670px) {
             width: calc(100% - 20px);
           }
-          img {
-            margin: 0 auto 10px auto;
-            max-width: 450px;
+          .image_container {
+            margin: 0 auto;
+            position: relative;
+            text-align: center;
             width: 100%;
+            .legend_container {
+              font-size: 12px;
+              font-weight: 300;
+              left: 0;
+              position: absolute;
+              text-transform: uppercase;
+              top: 0;
+              div {
+                height: 15px;
+                line-height: 15px;
+                &.legend_text {
+                  vertical-align: 3px;
+                  display: inline-block;
+                  margin: 0 2px;
+                }
+                &.legend_item {
+                  display: inline-block;
+                  width: 1px;
+                }
+              }
+            }
+            img {
+              margin: 0 auto 10px auto;
+              max-width: 450px;
+              width: 100%;
+            }
+
           }
         }
       }

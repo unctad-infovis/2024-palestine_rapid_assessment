@@ -9,8 +9,11 @@ import PropTypes from 'prop-types';
 import 'intersection-observer';
 import { useIsVisible } from 'react-is-visible';
 
+// https://www.npmjs.com/package/chroma-js
+import chroma from 'chroma-js';
+
 function App({
-  captions, image, images, note, source, subtitle, title
+  captions, image, images, legend, note, source, subtitle, title
 }) {
   const appRef = useRef();
   const mapRef = useRef();
@@ -24,6 +27,9 @@ function App({
     const img = new Image();
     img.src = `./assets/img/${imageUrl}`;
   };
+
+  const f_damage = chroma.scale(['#fff', '#ab1d37']).nodata('#fff').domain([0, 150]);
+  const f_ntl = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').domain([0, 100]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -88,7 +94,20 @@ function App({
             <div className="content_container">
               <h4>{title}</h4>
               <h5>{subtitle}</h5>
-              <img src={`./assets/img/${images[0]}.png`} alt="" />
+              <div className="image_container">
+                {
+                  legend !== '' && (
+                    <div className="legend_container">
+                      <div className="legend_text">Less</div>
+                      {
+                        legend === 'damage' ? new Array(150).fill().map((el, i) => <div className="legend_item" style={{ backgroundColor: f_damage(i) }} />) : new Array(150).fill().map((el, i) => <div className="legend_item" style={{ backgroundColor: f_ntl(i) }} />)
+                      }
+                      <div className="legend_text">More</div>
+                    </div>
+                  )
+                }
+                <img src={`./assets/img/${images[0]}.png`} alt="" />
+              </div>
               {
                 source && (
                 <h6>
@@ -131,6 +150,7 @@ App.propTypes = {
   captions: PropTypes.instanceOf(Array).isRequired,
   image: PropTypes.string.isRequired,
   images: PropTypes.instanceOf(Array).isRequired,
+  legend: PropTypes.string,
   note: PropTypes.string,
   source: PropTypes.string,
   subtitle: PropTypes.string,
@@ -140,6 +160,7 @@ App.propTypes = {
 App.defaultProps = {
   source: false,
   note: false,
+  legend: '',
   subtitle: '',
   title: ''
 };
