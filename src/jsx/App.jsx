@@ -46,7 +46,7 @@ function App() {
               </p>
               <p>The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</p>
             </div>
-            <p className="button_container"><a href="#download" className="button">Download the report in PDF</a></p>
+            <div className="button_container"><a href="#anchor_download" className="button">Download the report in PDF</a></div>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@ function App() {
         <div className="chart_container">
           <div className="chart">
             <h4>The development challenges of Gaza: 2.3 million Palestinians locked in a small area, no way in or out</h4>
-            <img src={`${window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-palestine_rapid_assessment/assets/img/' : 'https://dummyimage.com/1000x1:1/f1f1f1/000&text=Ocha Map'}`} alt="" />
+            <img src={`${window.location.href.includes('unctad.org') ? 'https://dummyimage.com/1000x1:1/f1f1f1/000&text=Ocha Map' : 'https://dummyimage.com/1000x1:1/f1f1f1/000&text=Ocha Map'}`} alt="" />
             <h6>
               <em>Source:</em>
               {' '}
@@ -260,7 +260,7 @@ function App() {
           <p>Ending the military operation is an essential condition for reviving the economy of Gaza but it is far from sufficient. Reconstruction of Gaza, and indeed the whole Palestinian economy, requires lifting the blockade to allow Gaza to integrate with the West Bank and with regional markets coupled with substantial injection of foreign aid for the rebuilding of crucial infrastructure to bring about a genuine structural transformation. Recovery efforts should prioritize addressing the aforementioned longstanding constraints that held back Palestinian socioeconomic development.</p>
         </div>
         <div className="img_container">
-          <img src={`${window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-palestine_rapid_assessment/assets/img/' : './assets/img/'}2024-palestine_rapid_assessment_photo5-min.jpg`} alt="" />
+          <img src={`${window.location.href.includes('unctad.org') ? 'https://dummyimage.com/1000x16:9/f1f1f1/000&text=To be replaced' : 'https://dummyimage.com/1000x16:9/f1f1f1/000&text=To be replaced'}`} alt="" />
         </div>
         <div className="content_container">
           <p>While there is an urgent need to fund humanitarian relief and rebuild the shattered infrastructure of Gaza, the importance of providing the Palestinian government with immediate and robust budget support cannot be overstated. The scale of budget support should be sufficient to ensure that the Palestinian government averts collapse leading to the spread of large-scale chaos. Fiscal sustainability needs to be supported by donors to enable the government to maintain the limited, but still important, degree of governance it has been providing, deliver essential public services and sustain aggregate demand by paying the salaries of public employees and clearing its arrears to the private sector.</p>

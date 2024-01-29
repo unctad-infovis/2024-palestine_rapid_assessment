@@ -28,7 +28,7 @@ function App({
 
   const preloadImage = (imageUrl) => {
     const img = new Image();
-    img.src = `./assets/img/${imageUrl}`;
+    img.src = `${window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-palestine_rapid_assessment' : '.'}/assets/img/${imageUrl}`;
   };
 
   const f_damage = chroma.scale(['#fff', '#960000']).nodata('#fff').domain([0, 150]);
@@ -64,14 +64,14 @@ function App({
         mapRef.current.classList.remove('fixed');
         mapRef.current.classList.add('absolute');
         if (mapRef.current.querySelector('img').src !== `${window.location.href}assets/img/${images[0]}.png`) {
-          mapRef.current.querySelector('img').src = `./assets/img/${images[0]}.png`;
+          mapRef.current.querySelector('img').src = `${window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-palestine_rapid_assessment' : '.'}/assets/img/${images[0]}.png`;
         }
         setMapOffset(0);
       } else if (offset > (window.pageYOffset + mapContY + mapContHeight - mapHeight)) { // End
         mapRef.current.classList.remove('fixed');
         mapRef.current.classList.add('absolute');
         if (mapRef.current.querySelector('img').src !== `${window.location.href}assets/img/${images[images.length - 1]}.png`) {
-          mapRef.current.querySelector('img').src = `./assets/img/${images[images.length - 1]}.png`;
+          mapRef.current.querySelector('img').src = `${window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-palestine_rapid_assessment' : '.'}/assets/img/${images[images.length - 1]}.png`;
         }
         setMapOffset(false);
       } else { // Middle
@@ -79,7 +79,7 @@ function App({
           mapRef.current.classList.add('fixed');
           mapRef.current.classList.remove('absolute');
           if (mapRef.current.querySelector('img').src !== `${window.location.href}assets/img/${images[imageId]}.png`) {
-            mapRef.current.querySelector('img').src = `./assets/img/${images[imageId]}.png`;
+            mapRef.current.querySelector('img').src = `${window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-palestine_rapid_assessment' : '.'}/assets/img/${images[imageId]}.png`;
           }
         } else {
           mapRef.current.classList.remove('fixed');
@@ -110,7 +110,7 @@ function App({
                     </div>
                   )
                 }
-                <img src={`./assets/img/${images[0]}.png`} alt="" />
+                <img src={`${window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-palestine_rapid_assessment' : '.'}/assets/img/${images[0]}.png`} alt="" />
               </div>
             </div>
           </div>
