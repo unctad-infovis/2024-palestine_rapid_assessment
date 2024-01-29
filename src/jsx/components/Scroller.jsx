@@ -9,6 +9,9 @@ import PropTypes from 'prop-types';
 import 'intersection-observer';
 import { useIsVisible } from 'react-is-visible';
 
+// https://www.npmjs.com/package/uuid
+import { v4 as uuidv4 } from 'uuid';
+
 // https://www.npmjs.com/package/chroma-js
 import chroma from 'chroma-js';
 
@@ -28,19 +31,17 @@ function App({
     img.src = `./assets/img/${imageUrl}`;
   };
 
-  const f_damage = chroma.scale(['#fff', '#ab1d37']).nodata('#fff').domain([0, 150]);
+  const f_damage = chroma.scale(['#fff', '#960000']).nodata('#fff').domain([0, 150]);
   const f_ntl = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').domain([0, 100]);
 
   useEffect(() => {
     const onScroll = () => {
-      if (isVisible) {
-        setOffset(window.pageYOffset);
-      }
+      setOffset(window.pageYOffset);
     };
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, [isVisible]);
+  }, []);
 
   useEffect(() => {
     images.forEach(el => {
@@ -50,10 +51,8 @@ function App({
 
   useEffect(() => {
     const mapContY = mapContRef.current?.getBoundingClientRect().y || window.innerHeight;
-    if (imageId !== Math.round(Math.abs(mapContY / (window.innerHeight * 1.5)))) {
-      setImageId(Math.round(Math.abs(mapContY / (window.innerHeight * 1.5))));
-    }
-  }, [imageId, offset]);
+    setImageId(Math.min(Math.round(Math.abs(mapContY / (window.innerHeight * 1.5))), images.length - 1));
+  }, [images.length, offset]);
 
   useEffect(() => {
     const mapContY = mapContRef.current?.getBoundingClientRect().y || window.innerHeight;
@@ -76,15 +75,20 @@ function App({
         }
         setMapOffset(false);
       } else { // Middle
-        mapRef.current.classList.add('fixed');
-        mapRef.current.classList.remove('absolute');
-        if (mapRef.current.querySelector('img').src !== `${window.location.href}assets/img/${images[imageId]}.png`) {
-          mapRef.current.querySelector('img').src = `./assets/img/${images[imageId]}.png`;
+        if (isVisible) {
+          mapRef.current.classList.add('fixed');
+          mapRef.current.classList.remove('absolute');
+          if (mapRef.current.querySelector('img').src !== `${window.location.href}assets/img/${images[imageId]}.png`) {
+            mapRef.current.querySelector('img').src = `./assets/img/${images[imageId]}.png`;
+          }
+        } else {
+          mapRef.current.classList.remove('fixed');
+          mapRef.current.classList.add('absolute');
         }
         setMapOffset(0);
       }
     }
-  }, [image, imageId, images, offset]);
+  }, [image, imageId, images, isVisible, offset]);
 
   return (
     <div className="app" ref={appRef}>
@@ -93,14 +97,14 @@ function App({
           <div className="background_map" ref={mapRef} style={(mapOffset !== false) ? { top: mapOffset } : { bottom: '0' }}>
             <div className="content_container">
               <h4>{title}</h4>
-              <h5>{subtitle}</h5>
+              <h5>{subtitle[imageId]}</h5>
               <div className="image_container">
                 {
                   legend !== '' && (
                     <div className="legend_container">
                       <div className="legend_text">Less</div>
                       {
-                        legend === 'damage' ? new Array(150).fill().map((el, i) => <div className="legend_item" style={{ backgroundColor: f_damage(i) }} />) : new Array(150).fill().map((el, i) => <div className="legend_item" style={{ backgroundColor: f_ntl(i) }} />)
+                        legend === 'damage' ? new Array(150).fill().map((el, i) => <div className="legend_item" key={uuidv4()} style={{ backgroundColor: f_damage(i) }} />) : new Array(150).fill().map((el, i) => <div className="legend_item" key={uuidv4()} style={{ backgroundColor: f_ntl(i) }} />)
                       }
                       <div className="legend_text">More</div>
                     </div>
@@ -108,24 +112,6 @@ function App({
                 }
                 <img src={`./assets/img/${images[0]}.png`} alt="" />
               </div>
-              {
-                source && (
-                <h6>
-                  <em>Source:</em>
-                  {' '}
-                  {source}
-                </h6>
-                )
-              }
-              {
-                note && (
-                <h6>
-                  <em>Note:</em>
-                  {' '}
-                  {note}
-                </h6>
-                )
-              }
             </div>
           </div>
           {
@@ -141,6 +127,26 @@ function App({
           }
         </div>
       </div>
+      <div className="content_container">
+        {
+          source && (
+          <h6>
+            <em>Source:</em>
+            {' '}
+            {source}
+          </h6>
+          )
+        }
+        {
+          note && (
+          <h6>
+            <em>Note:</em>
+            {' '}
+            {note}
+          </h6>
+          )
+        }
+      </div>
       <noscript>Your browser does not support JavaScript!</noscript>
     </div>
   );
@@ -153,7 +159,7 @@ App.propTypes = {
   legend: PropTypes.string,
   note: PropTypes.string,
   source: PropTypes.string,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.instanceOf(Array).isRequired,
   title: PropTypes.string
 };
 
@@ -161,7 +167,6 @@ App.defaultProps = {
   source: false,
   note: false,
   legend: '',
-  subtitle: '',
   title: ''
 };
 

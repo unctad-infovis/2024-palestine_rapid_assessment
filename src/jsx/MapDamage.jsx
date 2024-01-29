@@ -12,12 +12,10 @@ import chroma from 'chroma-js';
 // import roundNr from './helpers/RoundNr.js';
 import CSVtoJSON from './helpers/CSVtoJSON.js';
 
-// const appID = '#app-root-2024-palestine_rapid_assessment';
-
 function App() {
-  const f_0_gaza = chroma.scale(['#fff', '#ab1d37']).nodata('#fff').domain([0, 625]); // oct
-  const f_1_gaza = chroma.scale(['#fff', '#ab1d37']).nodata('#fff').domain([0, 625]); // nov 23
-  const f_2_gaza = chroma.scale(['#fff', '#ab1d37']).nodata('#fff').domain([0, 625]); // nov 30
+  const f_0_gaza = chroma.scale(['#fff', '#960000']).nodata('#fff').domain([0, 625]); // oct
+  const f_1_gaza = chroma.scale(['#fff', '#960000']).nodata('#fff').domain([0, 625]); // nov 23
+  const f_2_gaza = chroma.scale(['#fff', '#960000']).nodata('#fff').domain([0, 625]); // nov 30
 
   const [dataGaza, setDataGaza] = useState(false);
 
@@ -31,10 +29,6 @@ function App() {
       })
       .then(body => setDataGaza(CSVtoJSON(body)));
   }, []);
-
-  // useEffect(() => {
-  //   console.log(data);
-  // }, [data]);
 
   return (
     <div className="app">
