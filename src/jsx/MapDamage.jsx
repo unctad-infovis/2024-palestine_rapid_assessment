@@ -8,8 +8,6 @@ import { v4 as uuidv4 } from 'uuid';
 import chroma from 'chroma-js';
 
 // Load helpers.
-// import formatNr from './helpers/FormatNr.js';
-// import roundNr from './helpers/RoundNr.js';
 import CSVtoJSON from './helpers/CSVtoJSON.js';
 
 function App() {
@@ -20,7 +18,7 @@ function App() {
   const [dataGaza, setDataGaza] = useState(false);
 
   useEffect(() => {
-    fetch((window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2024-palestine_rapid_assessment/assets/data/2024-palestine_rapid_assessment - data_damage_gaza.csv' : './assets/data/2024-palestine_rapid_assessment - data_damage_gaza.csv')
+    fetch(`${(window.location.href.includes('unctad.org')) ? 'https://storage.unctad.org/2024-palestine_rapid_assessment' : '.'}/assets/data/2024-palestine_rapid_assessment - data_damage_gaza.csv`)
       .then((response) => {
         if (!response.ok) {
           throw Error(response.statusText);

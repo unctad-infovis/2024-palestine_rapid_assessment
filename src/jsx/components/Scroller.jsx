@@ -164,9 +164,9 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  source: false,
-  note: false,
   legend: '',
+  note: false,
+  source: false,
   title: ''
 };
 
