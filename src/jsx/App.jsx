@@ -90,7 +90,7 @@ function App() {
           <p>More than three months into the military operation, an estimated 1.9 million people, or nearly 85 per cent of the population of Gaza, became internally displaced, following evacuation orders by the Government of Israel.</p>
           <p>
             Nearly 1.72 million of these internally displaced persons were registered in severely overcrowded facilities of the United Nations Relief and Works Agency for Palestine Refugees in the Near East (UNRWA), while the rest took shelter in schools, hospitals, wedding halls, offices and community centres, and some camped in open space near shelters.
-            <sup>4</sup>
+            <sup title="OCHA Occupied Palestinian Territory (2024). Hostilities in the Gaza Strip and Israel | Flash Update #104.">4</sup>
           </p>
         </div>
         <div className="img_container">
@@ -106,11 +106,11 @@ function App() {
           </p>
           <p>
             The number of children reportedly killed in a little over the first three weeks of bombing in Gaza has exceeded the combined total number of children killed in armed conflicts in more than 22 countries since 2019.
-            <sup title="See _https://www.savethechildren.net/news/gaza-3195-children-killed-three-weeks-surpasses-annual-number-children-killed-conflict-zones">7</sup>
+            <sup title="See https://www.savethechildren.net/news/gaza-3195-children-killed-three-weeks-surpasses-annual-number-children-killed-conflict-zones">7</sup>
           </p>
           <p>
             On 8 December 2023, the United Nations Secretary-General invoked article 99 of the Charter of the United Nations in his letter to the Security Council “because we are at a breaking point. There is a high risk of the total collapse of the humanitarian support system in Gaza, which would have devastating consequences. We anticipate that it would result in a complete breakdown of public order and increased pressure for mass displacement into Egypt. I fear the consequences could be devastating for the security of the entire region”.
-            <sup title="See _https://www.un.org/sg/en/content/sg/statement/2023-12-08/secretary-generals-remarks-the-security-council-the-situation-the-middle-east-including-the-palestinian-question-bilingual-delivered-scroll-down-for-all-english">8</sup>
+            <sup title="See https://www.un.org/sg/en/content/sg/statement/2023-12-08/secretary-generals-remarks-the-security-council-the-situation-the-middle-east-including-the-palestinian-question-bilingual-delivered-scroll-down-for-all-english">8</sup>
           </p>
           <p>
             Meanwhile, in the West Bank, including East Jerusalem, by 28 January 2024, 362 Palestinians were killed and 4,366 injured. The 507 Palestinians killed in the West Bank, including East Jerusalem, in 2023 marked the highest number of Palestinians killed in the West Bank since OCHA started recording casualties in 2005.
@@ -194,7 +194,7 @@ function App() {
             images={['2024-palestine_rapid_assessment_ntl_1x1_0', '2024-palestine_rapid_assessment_ntl_1x1_1', '2024-palestine_rapid_assessment_ntl_1x1_2', '2024-palestine_rapid_assessment_ntl_1x1_3']}
             legend="ntl"
             note="NTL at different days during the Israeli military operation. The measurement used is at-sensor day/night boundary radiance during the night of each respective day, expressed in watt per steradian per square centimetre, aggregated at a 500 x 500 m level. Each grid cell is a 1 km² area which represents the average of the four 500m × 500m sensor measurements of at-sensor day/night boundary radiance during the night of each respective day."
-            source="UNCTAD calculations based on the Black Marble NASA project, specifically the VNP46A1 VIIRS/NPP Daily Gridded Day Night Band Linear Lat Lon Grid Night product suite (data publicly available at https://ladsweb.Modaps.eosdis.nasa.gov)."
+            source="UNCTAD calculations based on the Black Marble NASA project, specifically the VNP46A1 VIIRS/NPP Daily Gridded Day Night Band Linear Lat Lon Grid Night product suite (data publicly available at https://ladsweb.modaps.eosdis.nasa.gov)."
             subtitle={['Night time luminosity (NTL) at different days during the Israeli military operation. Daily average 22 September – 6 October 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 22 November – 23 November 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 29 November – 30 November 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 28 December – 29 December 2023']}
             title="Darkness engulfed Gaza as destruction continued and economic activity across all sectors ground to a halt"
           />
@@ -202,7 +202,7 @@ function App() {
         <div className="content_container">
           <p>The impact of Israeli military operation on NTL (and therefore on household welfare) is estimated by comparing the average change in NTL in grid cells that were bombed with the change in NTL in grid cells that were not. The pre-military-operation NTL average of the daily measurements between 22 September and 6 October is used for comparing the estimates. The first round of bombing between 7 October and 22 November reduced NTL by 16.3 to 19.6 per cent. The cumulative effect of bombing between 7 October and 30 November, which includes both the first round of bombing, and the ceasefire is a reduction in NTL of 10.3–15.9 per cent.</p>
           <p className="highlight">The difference between the two estimates suggests that the ceasefire allowed NTL to recover by between 4 and 5 per cent. The cumulative effect of the Israeli military operation between 7 October and 28 December 2023 caused a reduction of NTL of between 31.1 and 36.5 per cent.</p>
-          <p>Also considered is the impact of the intensity of damage on NTL: a 1 percent increase in damage intensity (i.e. a 1 percent increase in the number of 40m x 40m cells bombed in each square kilometre grid cell), on average, is associated with a 6.2 per cent loss in NTL. The grid cells that suffered the highest level of damage experienced a loss of NTL in excess of 50 per cent.</p>
+          <p>Also considered is the impact of the intensity of damage on NTL: a 1 per cent increase in damage intensity (i.e. a 1 per cent increase in the number of 40m x 40m cells bombed in each square kilometre grid cell), on average, is associated with a 6.2 per cent loss in NTL. The grid cells that suffered the highest level of damage experienced a loss of NTL in excess of 50 per cent.</p>
           <p>In terms of household welfare, UNCTAD has previously estimated the elasticity of total household expenditures with respect to NTL, at the locality level, to be equal to 1.18. The NTL-based estimates therefore imply that household expenditure in Gaza was reduced by 19.2 to 23.1 per cent during the first phase of the Israeli operation. Once the ceasefire is taken into account, the fall in household expenditures between 7 October and 30 November 2023 is estimated to be in the range of 12.2–18.8 per cent. As of 28 December 2023, the fall in household expenditure is estimated to be between 36.6 and 43.1 per cent.</p>
           <p>
             <strong>Horizon and prospects for the recovery of Gaza</strong>
@@ -333,7 +333,7 @@ function App() {
             {' '}
             <strong>Only by ending the military confrontation and fully lifting the blockade of Gaza can there be hope to resolve sustainably the political, socioeconomic and humanitarian crisis engulfing Gaza.</strong>
           </p>
-          <p>Ending the conflict and lifting the blockade on Gaza are the necessary first steps towards the ultimate goal of achieving the two-State solution, in line with international law and relevant United Nations resolutions, along the 1967 borders, with the Gaza Strip constituting an integral part of the territory occupied in 1967.</p>
+          <p>Ending the conflict and lifting the blockade on Gaza are the necessary first steps towards the ultimate goal of achieving the two-state solution, in line with international law and relevant United Nations resolutions, along the 1967 borders, with the Gaza Strip constituting an integral part of the territory occupied in 1967.</p>
           <p>
             <strong>The restoration of infrastructure and essential services, such as education and health care, is crucial for containing and reversing the long-term consequences of the military operation on key development indicators, including mortality rates, the school year loss due to disrupted education and the toll on mental health and general well-being. There is an obvious and urgent need for large-scope recovery programmes that prioritize rebuilding infrastructure, especially in such vitalpublic goods as education and health.</strong>
             {' '}
