@@ -216,7 +216,11 @@
       font-size: 18px;
       font-weight: 300;
       line-height: 26px;
+      margin: auto 0 20px auto !important; 
       text-align: left;
+      strong {
+        font-weight: 600;
+      }
       &.highlight {
         color: @unbluetext;
         font-size: 22px;
@@ -336,7 +340,7 @@
         color: rgba(0, 158, 219, 0.8);
         font-size: 430px;
         font-weight: 700;
-        line-height: 320px;
+        line-height: 315px;
         overflow: hidden;
         position: absolute;
         top: 0;
@@ -364,6 +368,7 @@
         color: #fff;
         font-family: Roboto Condensed;
         font-size: 54px;
+        font-weight: 600;
         line-height: 60px;
         margin: auto auto;
         max-width: 1100px;
@@ -489,6 +494,12 @@
               margin: 0 0 10px 0;
               max-width: 500px;
               width: 100%;
+              @media all and (max-height: 800px) {
+                max-width: 400px;
+              }
+              @media all and (max-height: 600px) {
+                max-width: 300px;
+              }
             }
           }
         }

@@ -19,7 +19,7 @@ function App() {
       <div className="cover_container" style={{ paddingBottom: 0 }}>
         <div className="content_container">
           <h3 className="subtitle upper">Preliminary Assessment Of The</h3>
-          <h2 className="title">Economic Impact Of The Destruction Of Gaza</h2>
+          <h2 className="title">Economic Impact Of The Destruction In Gaza</h2>
           <h3 className="subtitle lower">And Prospects For Economic Recovery</h3>
           <h4>Unctad Rapid Assesment</h4>
           <h4 className="date">January 2024</h4>
@@ -37,7 +37,6 @@ function App() {
             </svg>
             <div className="content_container">
               <p>The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</p>
-              <p>UNCTAD gratefully acknowledges the contributions of Jean-Louis Arcand, President of the Global Development Network and Daniele Rinaldo, Assistant Professor, Department of Economics, University of Exeter, United Kingdom of Great Britain and Northern Ireland.</p>
             </div>
             <div className="button_container"><a href="#anchor_download" className="button">Download the report in PDF</a></div>
           </div>
@@ -156,12 +155,12 @@ function App() {
         </div>
         <div className="chart_container scroller">
           <Scroller
-            captions={[{ text: 'The first wave of bombing concentrated in the northern parts of Gaza including Gaza city', date: '6 October – 22 November', date_title: 'The first 6 weeks' }, { text: 'During the ceasefire the amount damage was limited', date: '23 November – 29 November', date_title: 'The cease fire' }, { text: 'The second wave of bombing extended from northern parts of Gaza to Khan Younis in the south', date: '7 October – 28 December', date_title: 'Overall' }]}
+            captions={[{ text: 'The first wave of bombing was concentrated in the northern parts of Gaza, including Gaza city', date: '7 October–22 November', date_title: 'The first 6 weeks' }, { text: 'During the ceasefire, the damage was limited', date: '23 November–29 November', date_title: 'The ceasefire' }, { text: 'After the ceasefire, the bombing extended from northern parts of Gaza to Khan Younis in the south', date: '7 October–28 December', date_title: 'Overall' }]}
             image="2024-palestine_rapid_assessment_damage"
             images={['2024-palestine_rapid_assessment_damage_40x40_0', '2024-palestine_rapid_assessment_damage_40x40_1', '2024-palestine_rapid_assessment_damage_40x40_2']}
             note="Each red pixel represents a 40m × 40m area that has been bombed within the time period of the map."
             source="Each red pixel represents a 40m × 40m area that has been bombed within the time period of the map. A value of 0 represents no detectable damage, while a value of 1 represents likely damage in human settlements (cities, towns, villages)."
-            subtitle={['Original damage maps. 7 October – 22 November 2023.', 'Original damage maps. 23 November – 29 November 2023.', 'Original damage maps. 6 October – 28 December 2023']}
+            subtitle={['Original damage maps. 7 October–22 November 2023.', 'Original damage maps. 23 November–29 November 2023.', 'Original damage maps. 7 October–28 December 2023']}
             title="The unprecedented level of destruction in the Gaza Strip rendering it uninhabitable"
           />
         </div>
@@ -171,13 +170,13 @@ function App() {
         </div>
         <div className="chart_container scroller">
           <Scroller
-            captions={[{ text: 'The first wave of bombing concentrated in the northern parts of Gaza including Gaza city', date: '7 October – 22 November', date_title: 'The first 6 weeks' }, { text: 'During the ceasefire the amount damage was limited', date: '23 November – 29 November', date_title: 'The cease fire' }, { text: 'The second wave of bombing extended from northern parts of Gaza to Khan Younis in the south', date: '7 October – 28 December', date_title: 'Overall' }]}
+            captions={[{ text: 'The first wave of bombing was concentrated in the northern parts of Gaza, including Gaza city', date: '7 October–22 November', date_title: 'The first 6 weeks' }, { text: 'During the ceasefire, the damage was limited', date: '23 November–29 November', date_title: 'The ceasefire' }, { text: 'After the ceasefire, the bombing extended from northern parts of Gaza to Khan Younis in the south', date: '7 October–28 December', date_title: 'Overall' }]}
             image="2024-palestine_rapid_assessment_damage"
             images={['2024-palestine_rapid_assessment_damage_1x1_0', '2024-palestine_rapid_assessment_damage_1x1_1', '2024-palestine_rapid_assessment_damage_1x1_2']}
             legend="damage"
             note="The period between November 23rd and 29th includes the ceasefire. Each grid cell aggregates 625 of the 40m × 40m grid cell available in the damages data. The associated measurement represents the number of bombed 40m x 40m cells within each 1 km² grid. Up to 28 December, the average number of bombed cells is 136 per km² (21.7 per cent of each grid surface). The 1 km² grid cell with the highest number of bombed 40m x 40m cells is in Beit Lahiya, with 624 cells bombed out of 625 (99.8 per cent of its grid surface)."
             source="UNCTAD calculations based on the Damage Analysis of Copernicus Sentinel-1 satellite data by Corey Scher of CUNY Graduate Center and Jamon Van Den Hoek of Oregon State University."
-            subtitle={['Damage intensity grids of 1km². 7 October – 22 November 2023', 'Damage intensity grids of 1km². 23 November – 29 November 2023', 'Damage intensity grids of 1km². 7 October – 28 December 2023']}
+            subtitle={['Damage intensity grids of 1km². 7 October–22 November 2023', 'Damage intensity grids of 1km². 23 November–29 November 2023', 'Damage intensity grids of 1km². 7 October–28 December 2023']}
             title="Some areas in Gaza have been completely destroyed by the Israeli military operation"
           />
         </div>
@@ -189,13 +188,13 @@ function App() {
         </div>
         <div className="chart_container scroller">
           <Scroller
-            captions={[{ text: 'Before the operation Gaza city, Khan Younis and Rafah were the most luminous', date: '22 September – 6 October', date_title: 'Average before the war' }, { text: 'Especially Gaza City looses in the north looses luminosity during the first weeks', date: '22 November – 23 November', date_title: 'Night before the cease fire' }, { text: 'By the end of the ceasefire Khan Youinis and Rafah became most luminous as people displaced moved further to the south', date: '29 November – 30 November', date_title: 'Last night of the cease fire' }, { text: 'By the end of the second wave of Israeli bombing concentrated in Khan Younis, Rafah was the most luminous in the Gaza strip ', date: 'Night of 28 December – 29 December' }]}
+            captions={[{ text: 'Before the military operation, Gaza city, Khan Younis and Rafah were the most luminous', date: '22 September–6 October', date_title: 'Average before the war' }, { text: 'The north, including Gaza City, lost luminosity during the first weeks of the military operation', date: '22 November–23 November', date_title: 'Night before the ceasefire' }, { text: 'By the end of the ceasefire, Khan Youinis and Rafah became the most luminous parts of Gaza as displaced people moved further to the south', date: '29 November–30 November', date_title: 'Last night of the ceasefire' }, { text: 'After the ceasefire, the bombing was extended to Khan Younis. Rafah became the only part of Gaza with luminosity', date: 'Night of 28 December–29 December' }]}
             image="2024-palestine_rapid_assessment_damage"
             images={['2024-palestine_rapid_assessment_ntl_1x1_0', '2024-palestine_rapid_assessment_ntl_1x1_1', '2024-palestine_rapid_assessment_ntl_1x1_2', '2024-palestine_rapid_assessment_ntl_1x1_3']}
             legend="ntl"
             note="NTL at different days during the Israeli military operation. The measurement used is at-sensor day/night boundary radiance during the night of each respective day, expressed in watt per steradian per square centimetre, aggregated at a 500 x 500 m level. Each grid cell is a 1 km² area which represents the average of the four 500m × 500m sensor measurements of at-sensor day/night boundary radiance during the night of each respective day."
             source="UNCTAD calculations based on the Black Marble NASA project, specifically the VNP46A1 VIIRS/NPP Daily Gridded Day Night Band Linear Lat Lon Grid Night product suite (data publicly available at https://ladsweb.modaps.eosdis.nasa.gov)."
-            subtitle={['Night time luminosity (NTL) at different days during the Israeli military operation. Daily average 22 September – 6 October 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 22 November – 23 November 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 29 November – 30 November 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 28 December – 29 December 2023']}
+            subtitle={['Night time luminosity (NTL) at different days during the Israeli military operation. Daily average 22 September–6 October 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 22 November–23 November 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 29 November–30 November 2023', 'Night time luminosity (NTL) at different days during the Israeli military operation. Night of 28 December–29 December 2023']}
             title="Darkness engulfed Gaza as destruction continued and economic activity across all sectors ground to a halt"
           />
         </div>
@@ -233,7 +232,7 @@ function App() {
             UNCTAD estimates that, during the 2014 Israeli military operation, a 1 per cent increase in the intensity of bombardment – measured by damaged structures per square kilometre – is associated with a 6.2 per cent reduction in expenditure per adult equivalent and a 6.3 per cent increase in the poverty rate. These coefficients can be applied to the current damage intensity per km² observed by UNOSAT for the current military operation.
             <sup title="To assess damage in the Gaza Strip, UNOSAT reviewed high-resolution satellite imagery using WorldView2 satellite with a resolution 50 cm.">14</sup>
           </p>
-          <p>UNOSAT released three damage assessments for the periods 7–15 October, 7 October – 7 November and 7 October – 26 November 2023. UNOSAT data show a dramatic increase in damage intensity: By 15 October, 10,548 buildings were damaged, by 7 November, the number of damaged buildings rose to 25,050 and by 26 November, that number reached 37,379 buildings, equivalent to 18 per cent of the total structures of the Gaza Strip.</p>
+          <p>UNOSAT released three damage assessments for the periods 7–15 October, 7 October–7 November and 7 October–26 November 2023. UNOSAT data show a dramatic increase in damage intensity: By 15 October, 10,548 buildings were damaged, by 7 November, the number of damaged buildings rose to 25,050 and by 26 November, that number reached 37,379 buildings, equivalent to 18 per cent of the total structures of the Gaza Strip.</p>
           <p>Between 15 October and 26 November 2023, the number of damaged buildings increased by approximately 355 per cent. The map below shows the damage intensity per km² for the three periods.</p>
         </div>
         <div className="chart_container">
@@ -333,7 +332,7 @@ function App() {
             {' '}
             <strong>Only by ending the military confrontation and fully lifting the blockade of Gaza can there be hope to resolve sustainably the political, socioeconomic and humanitarian crisis engulfing Gaza.</strong>
           </p>
-          <p>Ending the conflict and lifting the blockade on Gaza are the necessary first steps towards the ultimate goal of achieving the two-state solution, in line with international law and relevant United Nations resolutions, along the 1967 borders, with the Gaza Strip constituting an integral part of the territory occupied in 1967.</p>
+          <p>Ending the conflict and lifting the blockade on Gaza are the necessary first steps towards the ultimate goal of achieving the two-State solution, in line with international law and relevant United Nations resolutions, along the 1967 borders, with the Gaza Strip constituting an integral part of the territory occupied in 1967.</p>
           <p>
             <strong>The restoration of infrastructure and essential services, such as education and health care, is crucial for containing and reversing the long-term consequences of the military operation on key development indicators, including mortality rates, the school year loss due to disrupted education and the toll on mental health and general well-being. There is an obvious and urgent need for large-scope recovery programmes that prioritize rebuilding infrastructure, especially in such vitalpublic goods as education and health.</strong>
             {' '}
@@ -357,7 +356,7 @@ function App() {
           <p>
             <strong>More serious efforts will be needed to achieve the reunification of Gaza with the occupied West Bank; politically, administratively, fiscally, economically and socially under a single national government.</strong>
             {' '}
-            Gaza is and should remain an integral part of a future Palestinian State, as part of a viable two-state solution. The international community should play a key role in facilitating the long overdue reunification by providing sustained political, technical and financial support.
+            Gaza is and should remain an integral part of a future Palestinian State, as part of a viable two-State solution. The international community should play a key role in facilitating the long overdue reunification by providing sustained political, technical and financial support.
           </p>
           <p>
             Envisaged reunification should be complemented by enabling the Palestinian Government to unlock its growth potential by restoring the Gaza International Airport, which was opened in 1998 but was bombed by the occupying Power, in the aftermath of the Second Intifada, in 2001 and 2002, rendering it inoperable. This should be accompanied by building a seaport and enabling the Palestinian Government to develop the natural gas fields discovered in the 1990s in the Mediterranean Sea off the shore of Gaza to help finance the reconstruction of infrastructure, private and public structures and rebuild the productive base of Gaza as elaborated by UNCTAD.
