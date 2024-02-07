@@ -21,7 +21,7 @@ function App() {
           <h3 className="subtitle upper">Preliminary Assessment Of The</h3>
           <h2 className="title">Economic Impact Of The Destruction In Gaza</h2>
           <h3 className="subtitle lower">And Prospects For Economic Recovery</h3>
-          <h4>Unctad Rapid Assesment</h4>
+          <h4>Unctad Rapid Assessment</h4>
           <h4 className="date">January 2024</h4>
         </div>
         <img src={`${window.location.href.includes('unctad.org') ? 'https://storage.unctad.org/2024-palestine_rapid_assessment' : '.'}/assets/img/2024-palestine_rapid_assessment_world-min.png`} alt="" />
