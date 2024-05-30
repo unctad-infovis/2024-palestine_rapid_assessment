@@ -11,10 +11,11 @@ import chroma from 'chroma-js';
 import CSVtoJSON from './helpers/CSVtoJSON.js';
 
 function App() {
-  const f_0_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 103.5041667, 114, 135.4541667, 439]); // oct
-  const f_1_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 15, 17, 19.75, 439]); // 23 November
-  const f_2_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 37, 41.5, 48.66666667, 439]); // 30 November
-  const f_3_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 69, 73.36111111, 80, 439]); // 28 December
+  const f_0_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 103.5041667, 114, 135.4541667, 881]); // oct
+  const f_1_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 15, 17, 19.75, 881]); // 23 November
+  const f_2_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 37, 41.5, 48.66666667, 881]); // 30 November
+  const f_3_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 69, 73.36111111, 80, 881]); // 28 December
+  const f_4_gaza = chroma.scale(['rgba(0, 0, 0, 0.7)', '#f8e66b']).nodata('#fff').classes([11, 25.5, 28, 33.3, 881]); // 21 May
 
   const [dataGaza, setDataGaza] = useState(false);
 
@@ -50,6 +51,11 @@ function App() {
       <div className="ntl_map">
         {
           dataGaza && dataGaza.map((el) => <div className="square" title={el['28dec']} style={{ backgroundColor: f_3_gaza(el['28dec']) }} key={uuidv4()} />)
+        }
+      </div>
+      <div className="ntl_map">
+        {
+          dataGaza && dataGaza.map((el) => <div className="square" title={el['21may']} style={{ backgroundColor: f_4_gaza(el['21may']) }} key={uuidv4()} />)
         }
       </div>
       <noscript>Your browser does not support JavaScript!</noscript>
