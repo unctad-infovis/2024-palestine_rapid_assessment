@@ -47,6 +47,6 @@
     "chroma-js": "^2.4.2",
     "intersection-observer": "^0.12.2",
     "react-is-visible": "^1.2.0",
-    "uuid": "^9.0.1"
+    "uuid": "^11.1.1"
   }
 }
