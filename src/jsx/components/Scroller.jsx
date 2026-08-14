@@ -16,7 +16,7 @@ import { v4 as uuidv4 } from 'uuid';
 import chroma from 'chroma-js';
 
 function App({
-  captions, image, images, legend, note, source, subtitle, title
+  captions, image, images, legend = '', note = false, source = false, subtitle, title = ''
 }) {
   const appRef = useRef();
   const mapRef = useRef();
@@ -161,13 +161,6 @@ App.propTypes = {
   source: PropTypes.string,
   subtitle: PropTypes.instanceOf(Array).isRequired,
   title: PropTypes.string
-};
-
-App.defaultProps = {
-  legend: '',
-  note: false,
-  source: false,
-  title: ''
 };
 
 export default App;

@@ -26,7 +26,4 @@ App.propTypes = {
   chart_id: PropTypes.string.isRequired
 };
 
-App.defaultProps = {
-};
-
 export default App;
